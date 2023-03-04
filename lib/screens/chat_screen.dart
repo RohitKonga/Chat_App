@@ -183,19 +183,21 @@ class _ChatScreenState extends State<ChatScreen> {
                   SizedBox(
                     width: 10,
                   ),
+                
 
                   //user name & last seen
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+
                       //user name
                       Text(list.isNotEmpty ? list[0].name : widget.user.name,
                           style: GoogleFonts.poppins(
                               fontSize: 20,
                               color: Colors.white,
                               fontWeight: FontWeight.w500)),
-
+                  
                       //Sized Box
                       SizedBox(height: 2),
 
@@ -212,6 +214,17 @@ class _ChatScreenState extends State<ChatScreen> {
                                   lastActive: widget.user.lastActive),
                           style: GoogleFonts.poppins(
                               fontSize: 15, color: Colors.white70)),
+
+
+          //             Padding(
+          //               padding: EdgeInsets.symmetric(
+          // vertical: mq.height * 0.8, horizontal: mq.width * 0.09),
+          //               child: Column(
+          //                   children: [
+          //                     IconButton(onPressed: (){}, 
+          //                     icon: Icon(Icons.call_rounded, size: 23,color: Colors.white,))
+          //                   ]),
+          //             ),
                     ],
                   )
                 ],
