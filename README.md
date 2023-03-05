@@ -1,6 +1,6 @@
 # chat_app
 
-A new Flutter project.
+A new Flutter project Chat App, in which you can chat with your friends freely.
 
 ## Getting Started
 
