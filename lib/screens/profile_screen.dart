@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chat_app/api/apis.dart';
 import 'package:chat_app/models/chat_user.dart';
-import 'package:chat_app/screens/auth/login_screen.dart';
+import 'package:chat_app/screens/auth/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +33,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       //for hiding keyboard
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-          appBar:
-              AppBar(elevation: 3, centerTitle: true, title: Text('Profile', style: GoogleFonts.poppins())),
+          appBar: AppBar(
+              elevation: 3,
+              centerTitle: true,
+              title: Text('Profile', style: GoogleFonts.poppins())),
 
           //logout button
           floatingActionButton: Padding(
@@ -59,13 +61,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                       //replacing home with login screen
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (_) => LoginScreen()));
+                          MaterialPageRoute(builder: (_) => LoginPage(onTap: () {  },)));
                     });
                   });
                 },
                 icon: Icon(Icons.logout_outlined),
-                label: Text('Logout',
-                    style: GoogleFonts.poppins(fontSize: 16))),
+                label:
+                    Text('Logout', style: GoogleFonts.poppins(fontSize: 16))),
           ),
           body: Form(
             key: _formKey,
@@ -136,13 +138,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Text(widget.user.email,
                       style: GoogleFonts.poppins(
-                          color: Colors.black54,
-                          fontSize: 18
-                          )),
+                          color: Colors.black54, fontSize: 18)),
 
                   SizedBox(height: mq.height * .05),
 
-                  TextFormField(style: GoogleFonts.poppins(),
+                  TextFormField(
+                    style: GoogleFonts.poppins(),
                     initialValue: widget.user.name,
                     onSaved: (val) => APIs.me.name = val ?? '',
                     validator: (val) => val != null && val.isNotEmpty
@@ -158,7 +159,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   SizedBox(height: mq.height * .02),
 
-                  TextFormField(style: GoogleFonts.poppins(),
+                  TextFormField(
+                    style: GoogleFonts.poppins(),
                     initialValue: widget.user.about,
                     onSaved: (val) => APIs.me.about = val ?? '',
                     validator: (val) => val != null && val.isNotEmpty
@@ -216,9 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Text('Profile Picture',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500
-                      )),
+                      fontSize: 20, fontWeight: FontWeight.w500)),
               SizedBox(height: mq.height * .02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

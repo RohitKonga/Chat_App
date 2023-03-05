@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:chat_app/api/apis.dart';
-import 'package:chat_app/screens/auth/login_screen.dart';
+import 'package:chat_app/screens/auth/login_or_register_screen.dart';
 import 'package:chat_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context, MaterialPageRoute(builder: (_) => HomeScreen()));
       } else {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (_) => LoginScreen()));
+            context, MaterialPageRoute(builder: (_) => LoginOrRegisterScreen()));
       }
     });
   }

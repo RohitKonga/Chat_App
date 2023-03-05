@@ -15,6 +15,7 @@ late Size mq;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FirebaseService.setupFirebase();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   //enter full screen
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
