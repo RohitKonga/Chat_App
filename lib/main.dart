@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:chat_app/screens/splash_screen.dart';
 import 'package:chat_app/services/firebase_service.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_notification_channel/flutter_notification_channel.dart';
 import 'package:flutter_notification_channel/notification_importance.dart';
 import 'firebase_options.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 
 //global object for accessing device screen size
 late Size mq;
@@ -16,6 +18,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FirebaseService.setupFirebase();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+    if (Platform.isAndroid) {
+      await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+    }
+  });
 
   //enter full screen
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);

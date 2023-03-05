@@ -235,11 +235,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                Colors.white70, //.fromARGB(255, 219, 255, 178),
+                                Colors.black, //.fromARGB(255, 219, 255, 178),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25)),
                             elevation: 1,
-                            minimumSize: const Size.fromHeight(50)),
+                            minimumSize: const Size.fromHeight(55)),
                         onPressed: () {
                           _handleGoogleBtnClick();
                         },
@@ -252,7 +252,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         label: RichText(
                             text: TextSpan(
                                 style: GoogleFonts.poppins(
-                                    color: Colors.black, fontSize: 16),
+                                    color: Colors.white, fontSize: 16),
                                 children: [
                               TextSpan(text: 'Login with'),
                               TextSpan(

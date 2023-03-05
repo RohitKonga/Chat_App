@@ -135,7 +135,6 @@ class _LoginPageState extends State<LoginPage> {
                 // logo
                 const Icon(
                   Icons.lock,
-                  color: Colors.blue,
                   size: 100,
                 ),
 
@@ -226,18 +225,18 @@ class _LoginPageState extends State<LoginPage> {
 
                 // google
                 Positioned(
-                    bottom: mq.height * .15,
-                    left: mq.width * .05,
-                    width: mq.width * .9,
-                    height: mq.height * 0.06,
+                    // bottom: mq.height * .15,
+                    // left: mq.width * .05,
+                    // width: mq.width * .9,
+                    // height: mq.height * 0.06,
                     child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                Colors.white70, //.fromARGB(255, 219, 255, 178),
+                                Colors.black, //.fromARGB(255, 219, 255, 178),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25)),
                             elevation: 1,
-                            minimumSize: const Size.fromHeight(50)),
+                            minimumSize: const Size.fromHeight(55)),
                         onPressed: () {
                           _handleGoogleBtnClick();
                         },
@@ -250,7 +249,7 @@ class _LoginPageState extends State<LoginPage> {
                         label: RichText(
                             text: TextSpan(
                                 style: GoogleFonts.poppins(
-                                    color: Colors.black, fontSize: 16),
+                                    color: Colors.white, fontSize: 16),
                                 children: [
                               TextSpan(text: 'Login with'),
                               TextSpan(

@@ -81,6 +81,7 @@ dependencies:
   #for calling
   zego_uikit_prebuilt_call: ^2.0.0
   zego_uikit_signaling_plugin: ^2.0.0
+  flutter_windowmanager: ^0.2.0
 
 
 
