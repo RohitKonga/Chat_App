@@ -238,8 +238,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 Colors.black, //.fromARGB(255, 219, 255, 178),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25)),
-                            elevation: 1,
-                            minimumSize: const Size.fromHeight(55)),
+                            elevation: 1),
+                            //minimumSize: const Size.fromHeight(55)),
                         onPressed: () {
                           _handleGoogleBtnClick();
                         },

@@ -33,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (_) => HomeScreen()));
       } else {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (_) => LoginOrRegisterScreen()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (_) => LoginOrRegisterScreen()));
       }
     });
   }
@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
             bottom: mq.height * .15,
             width: mq.width,
             top: mq.height * 0.79,
-            child: Text('MADE BY ROHIT WITH 💙',
+            child: Text('MADE IN INDIA WITH 💙',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                     fontSize: 16, color: Colors.black87, letterSpacing: 1.5)))
