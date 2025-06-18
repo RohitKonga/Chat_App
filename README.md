@@ -47,5 +47,8 @@ A real-time cross-platform messaging application built with **Flutter** and powe
 ## 📷 Screenshots
 
 ![image](https://github.com/user-attachments/assets/b7ed0393-c5c7-4e12-bad9-c267e9ee3e92)
-![image](https://github.com/user-attachments/assets/b7ed0393-c5c7-4e12-bad9-c267e9ee3e92)
+![image](https://github.com/user-attachments/assets/5bbb44d5-fc5e-4948-9397-4ab792a77d28)
+![image](https://github.com/user-attachments/assets/2ea8caa9-56c0-446d-9822-e6e4d533396c)
+![image](https://github.com/user-attachments/assets/71e6b564-7445-4222-945e-0da2ac783ab9)
+![image](https://github.com/user-attachments/assets/e684372a-0e13-48fd-8b70-09a0bb436ee3)
 
